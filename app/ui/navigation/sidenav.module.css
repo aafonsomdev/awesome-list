@@ -28,5 +28,18 @@
 
 .focusElement {
     background-color: aqua;
-    border-color: aquamarine;
+    border-color: cadetblue;
+}
+
+.navHeaderIcon {
+    width: 70%;
+}
+
+.navHeaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2vh;
 }

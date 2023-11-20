@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 const links: NavLink[] = [
     {
         title: "Home",
-        href: "/home",
+        href: "/",
         icon: HomeIcon,
     },
     {
@@ -20,8 +20,7 @@ const links: NavLink[] = [
 
 const NavLinks = () => {
 
-    const pathname = usePathname()
-    console.log(pathname);
+    const pathname = usePathname();
 
     return (
         <>
@@ -29,7 +28,7 @@ const NavLinks = () => {
                 const LinkIcon = icon;
                 
                 return (
-                    <Link key={title + href} href={href} className={styles.navlink && (href === pathname ? styles.focusElement : '')} >
+                    <Link key={title + href} href={href} className={`${styles.navlink} ${pathname === href ? styles.focusElement : ''}`} >
                         <LinkIcon className={styles.navIcon}/>
                         {title}
                     </Link>

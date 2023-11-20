@@ -1,11 +1,11 @@
-import Link from "next/link";
 import styles from "./sidenav.module.css";
 import NavLinks from "./navlinks";
+import NavHeader from "./nav-header";
 
 const Sidenav = () => {
     return (
         <nav className={styles.container}>
-            <h2>Side Nav</h2>
+            <NavHeader title='Awesome List' />
 
             <NavLinks />
 
